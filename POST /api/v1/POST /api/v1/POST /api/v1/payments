@@ -1,0 +1,48 @@
+{
+  "reservation_id": "res_001",
+  "payment_method": "credit_card",
+  "amount": 6.00
+}
+{
+  "payment_id": "pay_001",
+  "status": "success"
+}
+
+---
+
+### 3️⃣ `usage-examples.md`
+
+
+```markdown
+# Usage Examples
+
+Here are a few example scenarios demonstrating how to use the API effectively.
+
+---
+
+## Scenario 1: A Resident Reserves a Spot
+
+1. **Search for available spots:**
+   `GET /api/v1/parking-spots/available?latitude=24.7136&longitude=46.6753`
+
+2. **Pick a spot and reserve it:**
+   `POST /api/v1/reservations`
+
+3. **Pay for the reservation:**
+   `POST /api/v1/payments`
+
+---
+
+## Scenario 2: A Visitor Pays for a Spot via QR Code
+
+1. Scan QR code posted on the parking meter.
+2. Get redirected to a mobile web app.
+3. Enter plate number and select duration.
+4. Pay using credit card or Apple Pay.
+
+---
+
+## Scenario 3: Admin Checks Daily Usage Report
+
+1. `GET /api/v1/reports/daily?date=2025-08-05`
+2. Response shows occupancy rate, revenue, and violations
